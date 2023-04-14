@@ -1,7 +1,7 @@
       **************************
        IDENTIFICATION DIVISION.
       **************************
-       PROGRAM-ID.  HelloWorld.
+       PROGRAM-ID.  Age.
        AUTHOR. ALIXPEL. 
        INSTALLATION. COBOL DEVELOPMENT CENTER. 
        DATE-WRITTEN. 10/04/23. 
@@ -12,20 +12,23 @@
        DATA DIVISION.
       **************************
        WORKING-STORAGE SECTION.
-       01  WS-NOM PIC X(12).
-
-
+       01  AGE PIC 9(3) VALUE 15.
       
       ***************************
        PROCEDURE DIVISION.
       **************************
-
-           DISPLAY "HELLO WORLD !".
-           DISPLAY "Quel est ton nom ?".
-
-           ACCEPT WS-NOM.
-
-           DISPLAY "EH BIEN SALUT A TOI " WS-NOM.
+           EVALUATE AGE
+              WHEN 0 THRU 3
+                 DISPLAY 'VOUS ETES UN BEBE.'
+              WHEN 4 THRU 10
+                 DISPLAY 'VOUS ETES UN ENFANT.'
+              WHEN 11 THRU 17
+                 DISPLAY 'VOUS ETES UN ADOLESCENT.'
+              WHEN 18 THRU 130
+                 DISPLAY 'VOUS ETES ADULTE.'
+              WHEN OTHER
+                 DISPLAY 'VOUS ETES IMMORTEL.'
+           END-EVALUATE
 
            STOP RUN.
        

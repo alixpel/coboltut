@@ -1,7 +1,7 @@
       **************************
        IDENTIFICATION DIVISION.
       **************************
-       PROGRAM-ID.  HelloWorld.
+       PROGRAM-ID.  Solde.
        AUTHOR. ALIXPEL. 
        INSTALLATION. COBOL DEVELOPMENT CENTER. 
        DATE-WRITTEN. 10/04/23. 
@@ -12,20 +12,13 @@
        DATA DIVISION.
       **************************
        WORKING-STORAGE SECTION.
-       01  WS-NOM PIC X(12).
-
-
+       01  SOLDE PIC S9(4).
       
       ***************************
        PROCEDURE DIVISION.
       **************************
-
-           DISPLAY "HELLO WORLD !".
-           DISPLAY "Quel est ton nom ?".
-
-           ACCEPT WS-NOM.
-
-           DISPLAY "EH BIEN SALUT A TOI " WS-NOM.
+           MOVE 1635 TO SOLDE.
+           DISPLAY SOLDE.
 
            STOP RUN.
        
