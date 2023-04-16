@@ -16,7 +16,7 @@
       
       ***************************
        PROCEDURE DIVISION.
-      **************************
+      ***************************
            EVALUATE AGE
               WHEN 0 THRU 3
                  DISPLAY 'VOUS ETES UN BEBE.'
