@@ -30,6 +30,7 @@
       ***************************
        PROCEDURE DIVISION.
       ***************************
+           SORT WS-PRENOM ON ASCENDING KEY WS-PRENOM 
            PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
               DISPLAY WS-PRENOM(I)
            END-PERFORM
